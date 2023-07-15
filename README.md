@@ -14,13 +14,15 @@ Proje Yapısı:
     
         * HDI.ExamProject.Application 
         
-          - ProductAppService.cs - IProductAppService.cs - DTO
+          - ProductAppService.cs - IProductAppService - DTO
           
-          - CustomerAppService.cs - ICustomerAppService.cs - DTO
+          - CustomerAppService.cs - ICustomerAppService - DTO
           
-          - DealerAppService.cs - IDealerAppService.cs - DTO
+          - DealerAppService.cs - IDealerAppService - DTO
           
           - ServiceAppService.cs - IServiceAppService - DTO
+
+          - DashboardDataAppService.cs - IDashboardDataAppService.cs - DTO  //Anlık satış veri takip ekranı
           
         * HDI.ExamProject.Core 
         
@@ -36,6 +38,6 @@ Proje Yapısı:
           
         * HDI.ExamProject.Web 
         
-          - Controllers / ProductController, CustomerController, DealerController, Service"Controller
+          - Controllers / ProductController, CustomerController, DealerController, ServiceController, LoginController, SalesController, DashboardDataController
           
-          - Views / Product.cshtml, Customer.cshtml, Dealer.cshtml, Service.cshtml)
+          - Views / Product.cshtml, Customer.cshtml, Dealer.cshtml, Service.cshtml, Login.cshtml, Dashboard.cshtml
