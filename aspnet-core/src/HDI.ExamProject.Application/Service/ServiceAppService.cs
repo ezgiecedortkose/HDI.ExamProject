@@ -16,6 +16,12 @@ namespace HDI.ExamProject.Service
             : base(repository)
         {
         }
+
+        public async Task<ServiceDto> GetAsync(Guid id)
+        {
+            var serviceCenter = await Repository.GetAsync(id);
+            return ObjectMapper.Map<ServiceDto>(serviceCenter);
+        }
     }
 
 }

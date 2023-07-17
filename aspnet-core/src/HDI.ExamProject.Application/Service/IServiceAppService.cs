@@ -10,6 +10,7 @@ namespace HDI.ExamProject.Service
 {
     public interface IServiceAppService : IAsyncCrudAppService<ServiceDto, Guid, PagedAndSortedResultRequestDto, CreateServiceDto, UpdateServiceDto>
     {
+        Task<ServiceDto> GetAsync(Guid id);
     }
 
 }
