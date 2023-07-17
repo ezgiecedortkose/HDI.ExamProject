@@ -1,0 +1,49 @@
+﻿@model HDI.ExamProject.Web.Models.DashboardDataView.DashboardDataViewModel
+
+<h1>Dashboard</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <h3>Product Sales</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Sales Count</th>
+                    <th>Total Revenue</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var productSale in Model.ProductSales)
+                {
+                    <tr>
+                        <td>@productSale.ProductName</td>
+                        <td>@productSale.SalesCount</td>
+                        <td>@productSale.TotalRevenue</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6">
+        <h3>Service Center Repairs</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Service Center Name</th>
+                    <th>Repair Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var repair in Model.ServiceCenterRepairs)
+                {
+                    <tr>
+                        <td>@repair.ServiceCenterName</td>
+                        <td>@repair.RepairCount</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
