@@ -21,6 +21,13 @@ namespace HDI.ExamProject.Dealer
             var dealers = await Repository.GetAllListAsync();
             return new ListResultDto<DealerDto>(ObjectMapper.Map<List<DealerDto>>(dealers));
         }
+
+        public async Task<DealerDto> GetAsync(Guid id)
+        {
+            var dealer = await Repository.GetAsync(id);
+            return ObjectMapper.Map<DealerDto>(dealer);
+        }
+
     }
 }
 

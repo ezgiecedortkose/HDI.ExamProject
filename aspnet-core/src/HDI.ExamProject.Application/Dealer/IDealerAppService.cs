@@ -9,6 +9,7 @@ namespace HDI.ExamProject.Dealer
     public interface IDealerAppService : IAsyncCrudAppService<DealerDto, Guid, PagedAndSortedResultRequestDto, CreateDealerDto, UpdateDealerDto>
     {
         Task<ListResultDto<DealerDto>> GetAll();
+        Task<DealerDto> GetAsync(Guid id);
     }
 }
 
