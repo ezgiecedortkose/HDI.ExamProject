@@ -1,0 +1,48 @@
+﻿@model HDI.ExamProject.Web.Models.ServiceView.ServiceViewModel
+
+<div class="service-center-details">
+    <h1 class="title">Service Center Details</h1>
+    <div class="content">
+        <div class="info">
+            <div class="field">
+                <span class="label">Name:</span>
+                <span class="value">@Model.Name</span>
+            </div>
+            <div class="field">
+                <span class="label">Address:</span>
+                <span class="value">@Model.Address</span>
+            </div>
+            <div class="field">
+                <span class="label">Phone Number:</span>
+                <span class="value">@Model.PhoneNumber</span>
+            </div>
+        </div>
+        @if (Model.Products.Count > 0)
+        {
+            <div class="products">
+                <h3 class="subtitle">Products</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Description</th>
+                            <th>Risk Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var product in Model.Products)
+                        {
+                            <tr>
+                                <td>@product.Name</td>
+                                <td>@product.Price</td>
+                                <td>@product.Description</td>
+                                <td>@product.RiskCost</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>
+</div>
