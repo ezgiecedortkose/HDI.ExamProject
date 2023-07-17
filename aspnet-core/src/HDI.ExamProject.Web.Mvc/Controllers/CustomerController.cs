@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HDI.ExamProject.Controllers;
 using HDI.ExamProject.Customer;
 using HDI.ExamProject.Customer.Dto;
 using Microsoft.AspNetCore.Mvc;
@@ -10,7 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HDI.ExamProject.Web.Controllers
 {
-    public class CustomerController : Controller
+    public class CustomerController : ExamProjectControllerBase
     {
         private readonly ICustomerAppService _customerAppService;
 

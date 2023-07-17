@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Abp.Application.Services.Dto;
+using HDI.ExamProject.Controllers;
 using HDI.ExamProject.Service;
 using HDI.ExamProject.Service.Dto;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HDI.ExamProject.Web.Controllers
 {
-    public class ServiceController : Controller
+    public class ServiceController : ExamProjectControllerBase
     {
         private readonly IServiceAppService _serviceAppService;
 

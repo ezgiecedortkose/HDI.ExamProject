@@ -1,10 +1,11 @@
 ﻿using System.Threading.Tasks;
+using HDI.ExamProject.Controllers;
 using HDI.ExamProject.DashboardData;
 using HDI.ExamProject.DashboardData.Dto;
 using Microsoft.AspNetCore.Mvc;
 namespace HDI.ExamProject.Web.Controllers
 {
-    public class DashboardDataController : Controller
+    public class DashboardDataController : ExamProjectControllerBase
     {
         private readonly IDashboardDataAppService _dashboardDataService;
 

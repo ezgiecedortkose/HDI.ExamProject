@@ -4,13 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Abp.Application.Services.Dto;
 using Abp.AspNetCore.Mvc.Controllers;
+using HDI.ExamProject.Controllers;
 using HDI.ExamProject.Dealer;
 using HDI.ExamProject.Dealer.Dto;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HDI.ExamProject.Web.Controllers
 {
-    public class DealerController : AbpController
+    public class DealerController : ExamProjectControllerBase
     {
         private readonly IDealerAppService _dealerAppService;
 

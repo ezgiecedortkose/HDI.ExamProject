@@ -1,4 +1,5 @@
 ﻿using System;
+using HDI.ExamProject.Controllers;
 using HDI.ExamProject.Product;
 using HDI.ExamProject.Product.Dto;
 using Microsoft.AspNetCore.Mvc;
@@ -7,7 +8,7 @@ namespace HDI.ExamProject.Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductController : ControllerBase
+    public class ProductController : ExamProjectControllerBase
     {
         private readonly IProductAppService _productAppService;
 
