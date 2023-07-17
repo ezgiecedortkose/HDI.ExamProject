@@ -15,6 +15,46 @@ namespace HDI.ExamProject.Web.Startup
             context.Manager.MainMenu
                 .AddItem(
                     new MenuItemDefinition(
+                        PageNames.Product,
+                        L("Product"),
+                        url: "Product",
+                        icon: "fas fa-info-circle"
+                    )
+                )
+                .AddItem(
+                    new MenuItemDefinition(
+                        PageNames.Customer,
+                        L("Customer"),
+                        url: "Customer",
+                        icon: "fas fa-info-circle"
+                    )
+                )
+                .AddItem(
+                    new MenuItemDefinition(
+                        PageNames.Service,
+                        L("Service"),
+                        url: "Service",
+                        icon: "fas fa-info-circle"
+                    )
+                )
+                .AddItem(
+                    new MenuItemDefinition(
+                        PageNames.Dealer,
+                        L("Dealer"),
+                        url: "Dealer",
+                        icon: "fas fa-info-circle"
+                    )
+                )
+                .AddItem(
+                    new MenuItemDefinition(
+                        PageNames.DashboardData,
+                        L("DashboardData"),
+                        url: "DashboardData",
+                        icon: "fas fa-info-circle"
+                    )
+                )
+                .AddItem(
+                    new MenuItemDefinition(
                         PageNames.About,
                         L("About"),
                         url: "About",
