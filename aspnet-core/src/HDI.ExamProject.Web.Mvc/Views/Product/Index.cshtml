@@ -1,0 +1,32 @@
+﻿@model List<HDI.ExamProject.Web.Models.ProductView.ProductViewModel>
+
+<h1>Products</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Risk Cost</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Price</td>
+                <td>@product.Description</td>
+                <td>@product.RiskCost</td>
+                <td>
+                    <a href="@Url.Action("Edit", "Product", new { id = product.Id })">Edit</a> |
+                    <a href="@Url.Action("Delete", "Product", new { id = product.Id })">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create", "Product")">Create New Product</a>
