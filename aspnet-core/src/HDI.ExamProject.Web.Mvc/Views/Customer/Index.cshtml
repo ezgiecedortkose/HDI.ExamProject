@@ -1,0 +1,61 @@
+﻿@model HDI.ExamProject.Web.Models.CustomerView.CustomerViewModel
+
+<h1>Customer Details</h1>
+
+<div class="customer-info">
+    <h3>Customer Information</h3>
+    <p><strong>Name:</strong> @Model.Name</p>
+    <p><strong>Address:</strong> @Model.Address</p>
+    <p><strong>Phone Number:</strong> @Model.PhoneNumber</p>
+    <p><strong>Registration Date:</strong> @Model.CustomerRegistrationDate.ToString("dd/MM/yyyy")</p>
+</div>
+
+<div class="products-purchased">
+    <h3>Products Purchased</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Risk Cost</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model.CustomerProductsPurchased)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@product.Price.ToString("C2")</td>
+                    <td>@product.Description</td>
+                    <td>@product.RiskCost.ToString("C2")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="products">
+    <h3>All Products</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Risk Cost</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model.Products)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@product.Price.ToString("C2")</td>
+                    <td>@product.Description</td>
+                    <td>@product.RiskCost.ToString("C2")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
