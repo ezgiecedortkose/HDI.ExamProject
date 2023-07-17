@@ -1,0 +1,39 @@
+﻿@model List<HDI.ExamProject.Web.Models.DealerView.DealerViewModel>
+
+<h1>Dealers</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+            <th>Products</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var dealer in Model)
+        {
+            <tr>
+                <td>@dealer.Name</td>
+                <td>@dealer.Address</td>
+                <td>@dealer.PhoneNumber</td>
+                <td>
+                    <ul>
+                        @foreach (var product in dealer.Products)
+                        {
+                            <li>@product.Name - @product.Price</li>
+                        }
+                    </ul>
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", "Dealer", new { id = dealer.Id })">Edit</a> |
+                    <a href="@Url.Action("Delete", "Dealer", new { id = dealer.Id })">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create", "Dealer")">Create New Dealer</a>
